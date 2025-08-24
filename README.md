@@ -394,4 +394,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ```
 
-Ky [README.md](http://README.md) është i plotë dhe profesional, me të gjitha seksionet e nevojshme për një projekt GitHub të suksesshëm.
