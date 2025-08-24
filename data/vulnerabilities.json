@@ -1,0 +1,95 @@
+{
+  "ftp": [
+    {
+      "id": "FTP-001",
+      "name": "Anonymous FTP Access",
+      "severity": "medium",
+      "description": "FTP server allows anonymous access",
+      "banner_pattern": "220.*FTP.*anonymous",
+      "recommendation": "Disable anonymous FTP access if not required",
+      "cve": null
+    },
+    {
+      "id": "FTP-002",
+      "name": "Weak FTP Authentication",
+      "severity": "high",
+      "description": "FTP server may have weak or default credentials",
+      "banner_pattern": "220.*FTP",
+      "recommendation": "Implement strong authentication and disable weak credentials",
+      "cve": null
+    }
+  ],
+  "ssh": [
+    {
+      "id": "SSH-001",
+      "name": "Weak SSH Algorithms",
+      "severity": "medium",
+      "description": "SSH server supports weak encryption algorithms",
+      "banner_pattern": "SSH-1\\.",
+      "recommendation": "Upgrade to SSH version 2 and disable weak algorithms",
+      "cve": "CVE-2008-5161"
+    },
+    {
+      "id": "SSH-002",
+      "name": "SSH Version 1 Enabled",
+      "severity": "high",
+      "description": "SSH version 1 is enabled and contains security vulnerabilities",
+      "banner_pattern": "SSH-1\\.",
+      "recommendation": "Disable SSH version 1 and use only version 2",
+      "cve": "CVE-2001-0872"
+    }
+  ],
+  "http": [
+    {
+      "id": "HTTP-001",
+      "name": "Unencrypted HTTP Traffic",
+      "severity": "medium",
+      "description": "Web server serves content over unencrypted HTTP",
+      "banner_pattern": "HTTP/1\\.[01]",
+      "recommendation": "Implement HTTPS and redirect HTTP traffic",
+      "cve": null
+    },
+    {
+      "id": "HTTP-002",
+      "name": "Missing Security Headers",
+      "severity": "low",
+      "description": "Web server may be missing important security headers",
+      "banner_pattern": "HTTP/.*",
+      "recommendation": "Implement security headers like HSTS, CSP, X-Frame-Options",
+      "cve": null
+    }
+  ],
+  "https": [
+    {
+      "id": "HTTPS-001",
+      "name": "Weak SSL/TLS Configuration",
+      "severity": "high",
+      "description": "HTTPS server may support weak SSL/TLS versions or ciphers",
+      "banner_pattern": "HTTP/.*",
+      "recommendation": "Configure strong SSL/TLS settings and disable weak protocols",
+      "cve": null
+    }
+  ],
+  "smb": [
+    {
+      "id": "SMB-001",
+      "name": "EternalBlue Vulnerability",
+      "severity": "critical",
+      "description": "SMB server may be vulnerable to EternalBlue exploit",
+      "banner_pattern": ".*",
+      "recommendation": "Apply MS17-010 patch immediately",
+      "cve": "CVE-2017-0144"
+    }
+  ],
+  "rdp": [
+    {
+      "id": "RDP-001",
+      "name": "BlueKeep Vulnerability",
+      "severity": "critical",
+      "description": "RDP server may be vulnerable to BlueKeep exploit",
+      "banner_pattern": ".*",
+      "recommendation": "Apply CVE-2019-0708 patch immediately",
+      "cve": "CVE-2019-0708"
+    }
+  ]
+}

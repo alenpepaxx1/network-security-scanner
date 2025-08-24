@@ -1,0 +1,119 @@
+{
+  "21": {
+    "service": "FTP",
+    "description": "File Transfer Protocol",
+    "banner_regex": "220.*FTP",
+    "default_credentials": ["anonymous:anonymous", "ftp:ftp"],
+    "vulnerabilities": ["anonymous_access", "weak_credentials"]
+  },
+  "22": {
+    "service": "SSH",
+    "description": "Secure Shell",
+    "banner_regex": "SSH-.*",
+    "version_regex": "SSH-([0-9\.]+)",
+    "vulnerabilities": ["weak_algorithms", "old_version"]
+  },
+  "23": {
+    "service": "Telnet",
+    "description": "Telnet Protocol",
+    "banner_regex": ".*elnet.*",
+    "vulnerabilities": ["cleartext_protocol", "no_encryption"]
+  },
+  "25": {
+    "service": "SMTP",
+    "description": "Simple Mail Transfer Protocol",
+    "banner_regex": "220.*SMTP",
+    "vulnerabilities": ["open_relay", "weak_auth"]
+  },
+  "53": {
+    "service": "DNS",
+    "description": "Domain Name System",
+    "banner_regex": ".*",
+    "vulnerabilities": ["zone_transfer", "dns_amplification"]
+  },
+  "80": {
+    "service": "HTTP",
+    "description": "Hypertext Transfer Protocol",
+    "banner_regex": "HTTP/.*",
+    "server_regex": "Server: ([^\\r\\n]+)",
+    "vulnerabilities": ["unencrypted_traffic", "weak_headers"]
+  },
+  "110": {
+    "service": "POP3",
+    "description": "Post Office Protocol v3",
+    "banner_regex": "\\+OK.*",
+    "vulnerabilities": ["cleartext_auth", "weak_encryption"]
+  },
+  "135": {
+    "service": "RPC",
+    "description": "Microsoft RPC Endpoint Mapper",
+    "banner_regex": ".*",
+    "vulnerabilities": ["rpc_enumeration", "weak_auth"]
+  },
+  "139": {
+    "service": "NetBIOS",
+    "description": "NetBIOS Session Service",
+    "banner_regex": ".*",
+    "vulnerabilities": ["null_session", "enumeration"]
+  },
+  "143": {
+    "service": "IMAP",
+    "description": "Internet Message Access Protocol",
+    "banner_regex": "\\* OK.*IMAP",
+    "vulnerabilities": ["cleartext_auth", "weak_encryption"]
+  },
+  "443": {
+    "service": "HTTPS",
+    "description": "HTTP over SSL/TLS",
+    "banner_regex": "HTTP/.*",
+    "vulnerabilities": ["weak_ssl", "cert_issues"]
+  },
+  "445": {
+    "service": "SMB",
+    "description": "Server Message Block",
+    "banner_regex": ".*",
+    "vulnerabilities": ["eternal_blue", "weak_auth"]
+  },
+  "993": {
+    "service": "IMAPS",
+    "description": "IMAP over SSL",
+    "banner_regex": "\\* OK.*IMAP",
+    "vulnerabilities": ["weak_ssl", "cert_issues"]
+  },
+  "995": {
+    "service": "POP3S",
+    "description": "POP3 over SSL",
+    "banner_regex": "\\+OK.*",
+    "vulnerabilities": ["weak_ssl", "cert_issues"]
+  },
+  "1433": {
+    "service": "MSSQL",
+    "description": "Microsoft SQL Server",
+    "banner_regex": ".*",
+    "vulnerabilities": ["weak_auth", "sql_injection"]
+  },
+  "3306": {
+    "service": "MySQL",
+    "description": "MySQL Database",
+    "banner_regex": ".*mysql.*",
+    "vulnerabilities": ["weak_auth", "old_version"]
+  },
+  "3389": {
+    "service": "RDP",
+    "description": "Remote Desktop Protocol",
+    "banner_regex": ".*",
+    "vulnerabilities": ["bluekeep", "weak_auth"]
+  },
+  "5432": {
+    "service": "PostgreSQL",
+    "description": "PostgreSQL Database",
+    "banner_regex": ".*",
+    "vulnerabilities": ["weak_auth", "configuration"]
+  },
+  "8080": {
+    "service": "HTTP-Proxy",
+    "description": "HTTP Alternate/Proxy",
+    "banner_regex": "HTTP/.*",
+    "vulnerabilities": ["open_proxy", "weak_auth"]
+  }
+}
