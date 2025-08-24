@@ -1,0 +1,22 @@
+# 1. Create project directory
+mkdir network-security-scanner
+cd network-security-scanner
+
+# 2. Create virtual environment
+python -m venv scanner-env
+source scanner-env/bin/activate  # Linux/Mac
+# or
+scanner-env\Scripts\activate     # Windows
+
+# 3. Save requirements.txt and install
+pip install -r requirements.txt
+
+# 4. Create directory structure
+mkdir gui core utils data assets reports logs
+touch gui/__init__.py core/__init__.py utils/__init__.py
+
+# 5. Add all source files
+# (Copy code from subsequent pages)
+
+# 6. Run the application
+python main.py

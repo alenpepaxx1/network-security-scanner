@@ -1,0 +1,11 @@
+# Install development dependencies
+pip install pytest black flake8
+
+# Format code
+black .
+
+# Run linting
+flake8 .
+
+# Run tests
+pytest tests/
